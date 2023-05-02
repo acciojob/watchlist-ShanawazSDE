@@ -22,7 +22,7 @@ public class MovieRepository {
     }
 
     public boolean movieAlreadyExists(Movie movie) {
-        System.out.println(movieSet.contains(movie));
+       // System.out.println(movieSet.contains(movie));
        return movieSet.contains(movie);
 
     }
