@@ -70,9 +70,10 @@ public class MovieRepository {
         this.directorSet = directorSet;
     }
 
-    public List<Movie> findAllMovies() {
-        List<Movie> list = new ArrayList<>();
-         list.addAll(movieSet);
+    public List<String> findAllMovies() {
+        List<String> list = new ArrayList<>();
+        for(Movie movie : movieSet)
+         list.add(movie.getName());
         return list;
     }
 

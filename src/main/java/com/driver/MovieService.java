@@ -67,18 +67,18 @@ public class MovieService {
         return Optional.empty();
     }
 
-    public List<Movie> getMoviesByDirectorName(String director) {
+    public List<String> getMoviesByDirectorName(String director) {
         Set<Pair> pairSet = movieRepository.getPairSet();
-        List<Movie> list = new ArrayList<>();
+        List<String> list = new ArrayList<>();
         for(Pair pair : pairSet){
             if(pair.getDirector().getName().equals(director)){
-                list.add(pair.getMovie());
+                list.add(pair.getMovie().getName());
             }
         }
         return list;
     }
 
-    public List<Movie> findAllMovies() {
+    public List<String> findAllMovies() {
 
         return movieRepository.findAllMovies();
     }
